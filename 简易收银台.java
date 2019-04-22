@@ -1,3 +1,5 @@
+package www.bit.hhy;
+
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
@@ -461,7 +463,7 @@ class OrderCenterImpl implements OrderCenter {
  * 字符界面收银台(优化版)
  * Author:qqy
  */
- class CheckStand3 {
+class sale {
     private static Scanner scanner = new Scanner(System.in);
 
     //商品中心管理
@@ -655,7 +657,7 @@ class OrderCenterImpl implements OrderCenter {
         String[] infoArray = value.split(" ");
         if (infoArray.length == 3 || infoArray.length == 1) {
             if (infoArray.length == 3) {
-                if (!(CheckStand3.isNumber(infoArray[0].trim())&& CheckStand3.isNumber(infoArray[2].trim()))){
+                if (!(sale.isNumber(infoArray[0].trim())&& sale.isNumber(infoArray[2].trim()))){
                     System.out.println("！商品编号或单价有误，请重新输入");
                 }else {
                     if (!flag) {
@@ -671,7 +673,7 @@ class OrderCenterImpl implements OrderCenter {
                 }
             }
             //infoArray.length == 1
-            if (!(CheckStand3.isNumber(infoArray[0].trim()))){
+            if (!(sale.isNumber(infoArray[0].trim()))){
                 System.out.println("！商品编号有误，请重新输入");
             }else{
                 if(goodsCenter.isExistGoods(infoArray[0])){
